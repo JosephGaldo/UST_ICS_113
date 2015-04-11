@@ -102,11 +102,30 @@
 									</div>
 									<div class="col-md-6">
 									<select id="event.Venue" class="form-control" required>
-									  <option value="USTSwimmingPool">UST Swimming Pool</option>
-									  <option value="USTEducationalPlayground">UST Educational Playground</option>
-									  <option value="USTMainBuilding">Main Building</option>
-									  <option value="audi">Kweba ni Eba</option>
-									  <option value="audi">Tite ng Imus</option>
+									  <option>--</option> 
+									  <option value="USTAMV-COA Multi-Purpose Hall (whole)">UST AMV-COA Multi-Purpose Hall (whole)</option>
+									  <option value="USTAMV-COA Multi-Purpose Hall A (part)">UST AMV-COA Multi-Purpose Hall A (part)</option>
+									  <option value="USTAMV-COA Multi-Purpose Hall B (part)">AMV-COA Multi-Purpose Hall B (part)</option>
+									  <option value="USTAMV-COA Multi-Purpose Hall C (part)">UST AMV-COA Multi-Purpose Hall C (part)</option>
+									  <option value="USTBeato Angelico AVR">UST Beato Angelico AVR</option>
+									  <option value="USTBeato Angelico Gallery">UST Beato Angelico Gallery</option>
+									  <option value="USTCivil Law Auditorium">UST Civil Law Auditorium</option>
+									  <option value="USTCivil Law Lobby">UST Civil Law Lobby</option>
+									  <option value="USTCovered Walk">UST Covered Walk</option>
+									  <option value="USTEducation Auditorium">UST Education Auditorium</option>
+									  <option value="USTEngineering Conference Hall">UST Engineering Conference Hall</option>
+									  <option value="USTGazebo (in front of Medicine Bldg.)">UST Gazebo (in front of Medicine Bldg.)</option>
+									  <option value="USTIn-Campus">UST In-Campus</option>
+									  <option value="USTMedicine Auditorium">UST Medicine Auditorium</option>
+									  <option value="USTOff-Campus">UST Off-Campus</option>
+									  <option value="USTP. Noval Covered Court">UST P. Noval Covered Court</option>
+									  <option value="USTPlaza Mayor">UST Plaza Mayor</option>
+									  <option value="USTQuadricentennial Pavilion Practice Gymnasium">UST Quadricentennial Pavilion Practice Gymnasium</option>
+									  <option value="USTQuadricentennial Square">UST Quadricentennial Square</option>
+									  <option value="USTTARC Auditorium">UST TARC Auditorium</option>
+									  <option value="USTUST Football Field/UST Grandstand">UST Football Field/UST Grandstand</option>
+									  <option value="UST Parade Grounds">UST Parade Grounds</option>
+									  <option value="UST Swimming Pool">UST Swimming Pool</option>
 									</select>
 									</div>
 							</div>
@@ -123,7 +142,7 @@
 									<label class="pull-right"> Name: </label>
 									</div>
 									<div class="col-md-6">
-									<input type="text" placeholder="Name" class="form-control" id="event.EventUserName" required/>
+									<input type="text" placeholder="Name" class="form-control" id="event.Name" required/>
 									</div>
 							</div>
 							<div class="row">
@@ -131,7 +150,7 @@
 									<label class="pull-right"> ID Number: </label>
 									</div>
 									<div class="col-md-6">
-									<input type="text" placeholder="ID Number" class="form-control" pattern="[0-9]{1,10}" id="event.EventUserID" required/>
+									<input type="text" placeholder="ID Number" class="form-control" pattern="[0-9]{1,10}" id="event.IDNum" required/>
 									</div>
 							</div>
 							<div class="row">
@@ -139,7 +158,7 @@
 									<label class="pull-right"> Mobile Number: </label>
 									</div>
 									<div class="col-md-6">
-									<input type="text" placeholder="Mobile Number" class="form-control" pattern="/^(\+\d{1,3}[- ]?)?\d{10}$/" id="event.EventUserID" required/>
+									<input type="text" placeholder="Mobile Number" class="form-control" pattern="/^(\+\d{1,3}[- ]?)?\d{10}$/" id="event.Mobilenum" required/>
 									</div>
 							</div>
 							<div class="row">
@@ -147,7 +166,7 @@
 									<label class="pull-right"> Email: </label>
 									</div>
 									<div class="col-md-6">
-									<input type="email" placeholder="Email Address" class="form-control" id="event.EventUserEmail" required/>
+									<input type="email" placeholder="Email Address" class="form-control" id="event.Email" required/>
 									</div>
 							</div>
 							<div class="row">
@@ -155,10 +174,7 @@
 									<label class="pull-right"> Faculty: </label>
 									</div>
 									<div class="col-md-6">
-										<select id="event.UserFaculty" class="form-control" required>
-										  <option value="audi">Kweba ni Eba</option>
-										  <option value="audi">Tite ng Imus</option>
-										</select>
+									<input type="text" class="form-control" placeholder="Faculty" id="event.Faculty" required/>
 									</div>
 							</div>
 							<div class="row">
@@ -166,10 +182,7 @@
 									<label class="pull-right"> Program: </label>
 									</div>
 									<div class="col-md-6">
-										<select id="event.UserProgram" class="form-control" required>
-										  <option value="audi">Kweba ni Eba</option>
-										  <option value="audi">Tite ng Imus</option>
-										</select>
+									<input type="text" class="form-control" placeholder="Program" id="event.Program" required/>
 									</div>
 							</div>
 							<div class="row">
@@ -177,7 +190,7 @@
 									<label class="pull-right"> Organization: </label>
 									</div>
 									<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Organization" id="event.EventUserOrganization" required/>
+									<input type="text" class="form-control" placeholder="Organization" id="event.Organization" required/>
 									</div>
 							</div>
 							
