@@ -19,7 +19,7 @@ $(document).ready(function () {
     });
 });
 
-$(document).ready(function () {
+$(document).ready(function () { 
     $("#Sign_up_student").submit(function (event) {
         event.preventDefault();
         var pass1 = $( 'input[name=password1student]' ).val();
