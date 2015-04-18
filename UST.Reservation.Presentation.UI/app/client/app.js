@@ -1,4 +1,4 @@
-
+//Employee Signup
 $(document).ready(function () {
     $("#Sign_up_Employee").submit(function (event) {
         event.preventDefault();
@@ -12,16 +12,19 @@ $(document).ready(function () {
 		else
 		{
 			toastr.success('Registration Success!');
+			//Resets form
 			$('#Sign_up_Employee').trigger("reset");
+			//Hides Modal
 			$('#employeesignupModal').modal('hide');
 			
 		}
     });
 });
-
+//Student Signup
 $(document).ready(function () { 
     $("#Sign_up_student").submit(function (event) {
         event.preventDefault();
+		//Gets value
         var pass1 = $( 'input[name=password1student]' ).val();
 		var pass2 = $( 'input[name=password2student]' ).val();
         if (pass1 != pass2) 
@@ -32,7 +35,9 @@ $(document).ready(function () {
 		else
 		{
 			toastr.success('Registration Success!');
+			//Resets form
 			$('#Sign_up_student').trigger("reset");
+			//Hides modal
 			$('#studentsignupModal').modal('hide');
 			
 		}
