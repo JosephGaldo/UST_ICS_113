@@ -1,5 +1,5 @@
-﻿<!DOCTYPE html>
-<!--Gamboa and Galdo User Interface-->
+<!DOCTYPE html>
+<!-- Gamboa and Galdo User Interface-->
 <html>
 	<head>
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -92,7 +92,7 @@
 								  </div>
 								</div>
 								<div class="item ">
-								  <img src="images/slide5.jpg"" alt="...">
+								  <img src="images/slide5.jpg"" alt="....">
 								  <div class="carousel-caption">
 									UST Quadricentennial Square
 								  </div>
@@ -136,7 +136,7 @@
 								<div class="item ">
 								  <img src="images/slide12.jpg"" alt="....">
 								  <div class="carousel-caption">
-									UST Roque Ruaño Building
+									UST Roque Ruano Building
 								  </div>
 								</div>
 							  </div>
@@ -153,6 +153,7 @@
 				</div>
 				<br/>
 				<!--Button-->
+					<div>
 					<div class="row">
 					<div class="col-md-4">
 						<button type="button" 
@@ -172,7 +173,31 @@
 						 Log in as Student
 						</button>
 					</div>
-						
+					</div>
+					</br>
+					<div>
+					</div>
+					
+					<div class="row">
+					<div class="col-md-4">
+						<button type="button" 
+						class="btn btn-primary btn-lg pull-left" 
+						data-toggle="modal" 
+						data-target="#employeesignupModal">
+						 Sign up as Employee
+						</button>
+					</div>
+					<div class="col-md-4">
+						&nbsp;
+					</div>
+					<div class="col-md-4">
+						<button type="button" 
+						class="btn btn-primary btn-lg pull-right" 
+						data-toggle="modal" data-target="#studentsignupModal">
+						 Sign up as Student
+						</button>
+					</div>
+					</div>	
 					</div>
 				</div>
 				<div class="col-md-3">
@@ -182,19 +207,19 @@
 			
 			</div>
 			</div>
-			<!--Modal Employee-->
+			<!--Modal Employee Log in-->
 			<div class="modal fade" id="employeeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			  <div class="modal-dialog">
 				<div class="modal-content">
 				  <div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel">Employee Login</h4>
+					<h2 class="modal-title" id="myModalLabel">Employee Login</h2>
 				  </div>
 					  <div class="modal-body">
 							<form role="Login" id="Log_in">
 							  <div class="form-group">
 								<input type="text" class="form-control" pattern="[0-9]{10}" placeholder="Employee ID" id="employee.ID" required>
-								<input type="Password" class="form-control" placeholder="Password" id="employee.Password" required>
+								<input type="Password" class="form-control" placeholder="Password" id="employee.Password" required pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}">
 							  </div>
 							  <button type="submit" class="btn btn-default btn-primary">Login</button>
 							  <a class="btn btn-link" href="#">Forgot Password?</a>
@@ -206,23 +231,89 @@
 				</div>
 			  </div>
 			</div>
-			<!--Modal Student-->
+			<!--Modal Student Log in-->
 			<div class="modal fade" id="studentModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			  <div class="modal-dialog">
 				<div class="modal-content">
 				  <div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel">Student Login</h4>
+					<h2 class="modal-title" id="myModalLabel">Student Login</h2>
 				  </div>
 					  <div class="modal-body">
 							<form role="Login" id="Log_in">
 							  <div class="form-group">
 								<input type="text" class="form-control" pattern="[0-9]{10}" placeholder="StudentID"
 								id="student.ID" required>
-								<input type="Password" class="form-control" placeholder="Password" id="student.Password" required>
+								<input type="Password" class="form-control" placeholder="Password" id="student.Password" required pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}">
 							  </div>
 							  <button type="submit" class="btn btn-default btn-primary">Login</button>
 							  <a class="btn btn-link" href="#">Forgot Password?</a>
+						</form>
+					  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-default btn-danger" data-dismiss="modal">Close</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<!--Modal Employee Sign up-->
+			<div class="modal fade" id="employeesignupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h2 class="modal-title" id="myModalLabel">Employee Sign up</h2>
+				  </div>
+					  <div class="modal-body">
+							<form role="Sign up" id="Sign_up">
+							<h4>It's free and always will be.</h4>
+							  <div class="form-group">
+								<input type="text" class="form-control" placeholder="Employee Full Name" id="employee.Name" required>
+								<h6>Format: "Last Name, First Name Middle Name"</h6>
+								<input type="text" class="form-control" pattern="[0-9]{10}" placeholder="Employee ID" id="employee.ID" required>
+								<h6>Example: "2013058561"</h6>
+								<input type="email" class="form-control" placeholder="Email Address" id="employee.emailAddress" required pattern="\w.*+\@+[a-z]+\.[a-z]{2,7}">
+								<h6>Example: "2013058561@ust-ics.mygbiz.com"</h6>
+								<input type="Password" class="form-control" placeholder="Password" id="employee.Password" required pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}">
+								<h6>Password must contain at least 6 characters, including UPPER/lowercase and numbers.</h6>
+								<input type="Password" class="form-control" placeholder="Confirm Password" id="employee.confirmPassword" required pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}">
+								<h6>Please enter the same Password as above.</h6>
+							  </div>
+							  <button type="submit" class="btn btn-default btn-primary">Create my account</button>
+							  <span class="help-block">By clicking Create my account, you agree to our Terms and that you have read our Data Use Policy, including our Cookie use.</span>
+						</form>
+					  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-default btn-danger" data-dismiss="modal">Close</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<!--Modal Student Sign up-->
+			<div class="modal fade" id="studentsignupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h2 class="modal-title" id="myModalLabel">Student Sign up</h2>
+				  </div>
+					  <div class="modal-body">
+							<form role="Sign up" id="Sign_up">
+							<h4>It's free and always will be.</h4>
+							  <div class="form-group">
+								<input type="text" class="form-control" placeholder="Student Full Name" id="student.Name" required>
+								<h6>Format: "Last Name, First Name Middle Name"</h6>
+								<input type="text" class="form-control" pattern="[0-9]{10}" placeholder="Student ID" id="student.ID" required>
+								<h6>Example: "2013058561"</h6>
+								<input type="email" class="form-control" placeholder="Email Address" id="student.emailAddress" required>
+								<h6>Example: "2013058561@ust-ics.mygbiz.com"</h6>
+								<input type="Password" class="form-control" placeholder="Password" id="student.Password" required pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}">
+								<h6>Password must contain at least 6 characters, including UPPER/lowercase and numbers.</h6>
+								<input type="Password" class="form-control" placeholder="Confirm Password" id="student.confirmPassword" required pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}">
+								<h6>Please enter the same Password as above.</h6>
+							  </div>
+							  <button type="submit" class="btn btn-default btn-primary">Create my account</button>
+							  <span class="help-block">By clicking Create my account, you agree to our Terms and that you have read our Data Use Policy, including our Cookie use.</span>
 						</form>
 					  </div>
 				  <div class="modal-footer">
